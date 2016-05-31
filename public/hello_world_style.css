@@ -1,0 +1,66 @@
+h1 {
+	color: gold;
+	font-family: 'Amatic SC', cursive;
+}
+
+#main-header {
+	text-align: center;
+}
+
+#container {
+	text-align: center;
+	font-family: cursive, helvetica, sans-serif;
+}
+
+#list {
+	color: gold;
+	text-decoration: underline;
+}
+
+h2 {
+	color: gold;
+	font-family: fantasy;
+	text-align: center;
+}
+
+#quote {
+	color: pink;
+	font-family: fantasy;
+}
+
+body {
+	background: gray;
+	//*background-image: url("img/humble.png");*//
+} 
+
+ul{
+	list-style: square;
+}
+
+ol{ 
+	list-style: upper-latin; 
+}
+
+dl {
+	font-family: helvetica;
+}
+
+td, tr {
+	text-align: center;
+}
+
+a: visited {
+	color: black;
+}
+
+a:hover {
+	color: blue;
+}
+
+a:link {
+	color:green;
+}
+
+a:active {
+	color:yellow;
+}

@@ -9,22 +9,22 @@ var receipt = 60;
 
 switch (luckyNumber) {
     case 0:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then your receipt will be $" + receipt);
+        console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then your receipt will be $" + receipt);
         break;
     case 1:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .1)));
+        console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .1)));
         break;
     case 2:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .25)));
+        console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .25)));
         break;
     case 3:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .35)));
+        console.log("If your receipt is $" + receipt + "  and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .35)));
         break;
     case 4:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .5)));
+        console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then your receipt will be $" + (receipt - (receipt * .5)));
         break;
     case 5:
-        console.log("If your receipt is $60 and your number is " + luckyNumber  + " then you get it all for free!");
+        console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then you get it all for free!");
 }
 
 
@@ -69,7 +69,6 @@ switch (monthNumber) {
     case 12:
         console.log("December");
         break;
-    default:
-        console.log("I do not exist.");
+   
     
 }

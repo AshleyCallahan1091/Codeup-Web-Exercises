@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Break and Continue</title>
+	</head>
+	<body>
+		<script>
+
+		"use strict";
+
+		var random = Math.floor((Math.random()*50)+1)
+
+		while (random % 2 !== 1) {
+
+			console.log("the first roll was  " + random)
+
+			random = Math.floor((Math.random()*50)+1)
+
+		}
+
+		console.log("random number to skip is " + random)
+
+		for (var i = 1; i <= 100; i++) {
+
+    		if (i % 2 !== 1) {
+        
+        	continue;
+    	}
+
+    
+			if (random === i) {
+				console.log("Yikes! Skipping number: " + i);
+			} else { 
+				console.log('Here is a lovely odd number: ' + i);
+			}
+				
+			if (i >= 49) {
+				break;
+			}
+		}
+
+
+
+		</script>
+	</body>
+</html>

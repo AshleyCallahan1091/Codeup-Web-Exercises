@@ -1,22 +1,32 @@
+"use strict";
+
 (function(){
-    "use strict";
+    
+		var names = ['Catherine', 'Madeleine', 'David', 'Evan'];
+
+		for (var i = 0; i < names.length; i++)
+
+			console.log(names[i]);
+
+
+
+
+
+
+
 
 
 		var names = ['Catherine', 'Madeleine', 'David', 'Evan'];
 
 		console.log('There are ' + names.length + ' names in the array');
 
-		console.log('The first name is: ' + names[0]);
+		names.forEach(function(element){
 
-		console.log('The second name is: ' + names[1]);
-
-		console.log('The third name is: ' + names[2]);
-
-		console.log('The fourth name is: ' + names[3]);
+		console.log(element);
 
 	
 
-
+});
 
 
 })();

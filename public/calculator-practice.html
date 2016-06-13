@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calulator WTF</title>
+		<link rel="stylesheet" href="css/calculator-practice.css">
+	</head>
+	<body>
+		<div id="calculator">
+		<!-- Screen and clear key -->
+		<div class="top">
+			<span class="clear">C</span>
+			<!--<div class="screen"></div> -->
+			<input class="numberPlace" id="textFirst" readonly>
+			<input class="numberPlace" id="operatorMagic" readonly>
+			<input class="numberPlace" id="textSecond" readonly>
+		</div>
+		
+		<div class="keys">
+			<!-- operators and other keys -->
+			<span class="digits" data-value="7">7</span>
+			<span class="digits" data-value="8">8</span>
+			<span class="digits" data-value="9">9</span>
+
+			<span class="operator" id="addition">+</span>
+
+			<span class="digits" data-value="4">4</span>
+			<span class="digits" data-value="5">5</span>
+			<span class="digits" data-value="6">6</span>
+
+			<span class="operator" id="subtraction">-</span>
+
+			<span class="digits" data-value="1">1</span>
+			<span class="digits" data-value="2">2</span>
+			<span class="digits" data-value="3">3</span>
+
+			<span class="operator" id="division">/</span>
+
+			<span class="digits" data-value="0">0</span>
+
+			<span id="decimal" class="nope">.</span>
+
+			<span id="eval">=</span>
+
+			<span class="operator" id="multiplication">x</span>
+		</div>
+	</div>
+
+	<script src="js/calculator-practice.js"></script>
+
+	</body>
+</html>

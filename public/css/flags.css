@@ -1,0 +1,450 @@
+h1 {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Ve surrender*/
+#france-flag {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+}
+
+
+
+/*France*/
+#france-blue {
+	
+	background-color: navy;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.france-white {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: #FFFFFF;
+
+}
+#france-red {
+	float: right;
+	background-color: red;
+	position: relative;
+	width: 33%;
+	height: 100%;
+
+}
+
+
+
+/*Ireland*/
+#ireland-green {
+	
+	background-color: green;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.ireland-white {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+#ireland-orange {
+	float: right;
+	background-color: orange;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Belgium*/
+
+#belgium-black {
+	
+	background-color: black;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.belgium-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+}
+
+#belgium-red {
+	float: right;
+	background-color: red;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Chad*/
+
+#chad-navy {
+	
+	background-color: navy;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.chad-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+}
+
+#chad-burgundy {
+	float: right;
+	background-color: #800020;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Guinea*/
+
+#guinea-red {
+	
+	background-color: red;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.guinea-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+}
+
+#guinea-green {
+	float: right;
+	background-color: green;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Ivory Coast*/
+
+#ivory-orange {
+	background-color: orange;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.ivory-white {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+#ivory-green {
+	float: right;
+	background-color: green;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Italy*/
+
+#italy-green {
+	
+	background-color: green;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.italy-white {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: #FFFFFF;
+
+}
+#italy-red {
+	float: right;
+	background-color: red;
+	position: relative;
+	width: 33%;
+	height: 100%;
+
+}
+
+
+
+/*Mali*/
+
+#mali-green {
+	
+	background-color: green;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.mali-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+
+}
+#mali-red {
+	float: right;
+	background-color: red;
+	position: relative;
+	width: 33%;
+	height: 100%;
+
+}
+
+
+
+/*Nigeria*/
+
+#nigeria-forest {
+	
+	background-color: #228B22;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.nigeria-white {
+	border: solid black 1px;
+	height: 400px;
+	width: 700px;
+	position: relative;
+	background-color: white;
+}
+
+#nigeria-forest1 {
+	float: right;
+	background-color: #228B22;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+
+/*Chad*/
+
+#romania-navy {
+	
+	background-color: navy;
+	position: relative;
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+.romania-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+}
+
+#romania-red {
+	float: right;
+	background-color: #CE3232;
+	position: relative;
+	width: 33%;
+	height: 100%;
+}
+
+
+
+/*Germany*/
+
+#germany-black {
+	
+	background-color: black;
+	position: relative;
+	width: 100%;
+	height: 33%;
+	float: left;
+	background: -180deg;
+}
+
+.germany-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: gold;
+}
+
+#germany-red {
+	float: right;
+	background-color: red;
+	position: relative;
+	width: 100%;
+	height: 33%;
+}
+
+
+
+/*Armenia*/
+
+#armenia-red {
+	
+	background-color: red;
+	position: relative;
+	width: 100%;
+	height: 33%;
+	float: left;
+	background: -180deg;
+}
+
+.armenia-gold {
+	border: solid black 1px;
+	height: 400px;
+	width: 800px;
+	position: relative;
+	background-color: gold;
+}
+
+#armenia-blue {
+	float: right;
+	background-color: navy;
+	position: relative;
+	width: 100%;
+	height: 33%;
+}
+
+
+
+/*Austria*/
+
+#austria-red {
+	
+	background-color: red;
+	position: relative;
+	width: 100%;
+	height: 33%;
+	float: left;
+	background: -180deg;
+}
+
+.austria-red {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: red;
+}
+
+#austria-white {
+	float: right;
+	background-color: white;
+	position: relative;
+	width: 100%;
+	height: 33%;
+}
+
+
+/*Botswana*/
+
+#botswana-blue {
+	
+	background-color: #87CEEB;
+	position: relative;
+	width: 100%;
+	height: 40%;
+	float: left;
+	background: -180deg;
+}
+
+.botswana-blue {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: #87CEEB;
+}
+
+#botswana-black {
+	float: right;
+	background-color: black;
+	position: relative;
+	width: 100%;
+	height: 20%;
+	border-top: 10px solid white;
+	border-bottom: 10px solid white;
+}
+
+
+
+#bulgaria-white {
+	
+	background-color: white;
+	position: relative;
+	width: 100%;
+	height: 33%;
+	float: left;
+	background: -180deg;
+}
+
+.bulgaria-red {
+	border: solid black 1px;
+	height: 400px;
+	width: 600px;
+	position: relative;
+	background-color: red;
+}
+
+#bulgaria-forest {
+	float: right;
+	background-color: #228B22;
+	position: relative;
+	width: 100%;
+	height: 33%;
+}

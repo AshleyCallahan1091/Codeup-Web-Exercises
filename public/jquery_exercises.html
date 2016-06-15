@@ -23,6 +23,7 @@
 			<li><a class="site">Tumblr</a></li>
 			<li><a class="site">Instagram</a></li>
 		</ul>
+		<p>Blah Blah Blah</p>
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
@@ -33,11 +34,29 @@
 
 
 			$(document).ready(function() {
-    			$("h1, p, li").css('background-color', '#FF0');
+    			$("h1").click(
+    				function(){
+    				$(this).css("background-color", "blue");
+    			})
 			});
 
+			$(document).ready(function() {
+    			$("p").dblclick(
+    				function(){
+    				$(this).css("font-size", "18px");
+    			})
+			});
 		
-
+			$(document).ready(function() {
+            $('li').hover(
+                function() {
+                    $(this).css('color', 'red');
+                },
+                function() {
+                    $(this).css('color', '#FFF');
+                }
+            );
+        });
 			
 
 

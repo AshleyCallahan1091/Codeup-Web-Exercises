@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery</title>
+	</head>
+	<body>
+
+		<p id="para">Hello World</p>
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<script>
+
+		// (function)(){
+		// 	var paragraph = document.getElementById('para')
+		// 	console.log( paragraph.innerText)
+		// })();
+
+		$(document).ready(function() {
+			var $paragraph = $("#para")
+			console.log( $paragraph.text())
+
+			$(document).ready(function() {
+    			alert( 'The DOM has finished loading!' );
+			});
+
+			//document.ready waits until the page is ready before it runs the code
+
+			
+
+
+
+			//change color of text
+
+			// var two = $('codeup')
+			// two.css({'color': 'burlywood', 'font-size' : '30px'});
+
+			// //event listener
+			// two.click(doStuff);
+
+		});
+		</script>
+	</body>
+</html>

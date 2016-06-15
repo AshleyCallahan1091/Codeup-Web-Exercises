@@ -6,7 +6,7 @@
 	<body>
 		<div>
 
-		<h1 id="foods">My Favorite Foods</h1>
+		<h1>My Favorite Foods</h1>
 		<ol>
 			<li>Sweet Rolls</li>
 			<li>Chocolate Fudge Brownie Ice Cream</li>
@@ -15,9 +15,9 @@
 			<li>Steak</li>
 		</ol>
 		<p></p>
-		<h2 id="websitesList">My Favorite Websites</h2>
-		<ul>
-			<li><a class="site">Google</a></li>
+		<h2 class="codeup">My Favorite Websites</h2>
+		<ul class="codeup">
+			<li id="codeup"><a class="site">Google</a></li>
 			<li><a class="site">Facebook</a></li>
 			<li> <a class="site">Pinterest</a></li>
 			<li><a class="site">Tumblr</a></li>
@@ -28,24 +28,18 @@
 
 		<script>
 
-		$(document).ready(function() {
-			var $foods = $("#foods").html();
-			alert(foods);
-		});
+		
+			
 
-			//document.ready waits until the page is ready before it runs the code
+			$(document).ready(function() {
+   				 $('.codeup').css('border', "1px solid red");
+					});
+
+			
 
 			
 
 
-
-			//change color of text
-
-			// var two = $('codeup')
-			// two.css({'color': 'burlywood', 'font-size' : '30px'});
-
-			// //event listener
-			// two.click(doStuff);
 
 		
 		</script>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Google Maps API </title>
+		<style>
+			#map{
+				height: 300px; 
+			} 
+
+			#map2{
+				height: 300px; 
+			} 
+
+			#map3{
+				height: 300px; 
+			} 
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<p>
+		<div id="map2"></div>
+		<p>
+		<div id="map3"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd1TXiwJvWwwc7wFYtny6B62-l2JkMZ4E"></script>
+		<script type="text/javascript">
+			(function() {
+			 "use strict";
+
+	   
+			var mapOptions = {
+			// Set the zoom level
+				zoom: 5,
+
+			// This sets the center of the map at our location
+				center: {
+					lat:  29.426791,
+					lng: -98.489602
+				}
+			};
+		
+			var map1 = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+			var geocoder = new google.maps.Geocoder();
+
+			var address;
+
+			var address = "21134 US Hwy 281 N #105, San Antonio, TX 78258";
+
+			geocoder.geocode({ "address": address }, function(results, status) {
+
+   				if (status == google.maps.GeocoderStatus.OK) {
+
+       			map1.setCenter(results[0].geometry.location);
+   				} else {
+
+       			alert("Geocoding was not successful - STATUS: " + status);
+  			 }
+  			
+			});
+
+
+			var mapOptions2 = {
+			// Set the zoom level
+				zoom: 15,
+
+			// This sets the center of the map at our location
+				center: {
+					lat:  29.640997,
+					lng: -98.453609
+				}
+			};
+		
+			var map2 = new google.maps.Map(document.getElementById("map2"), mapOptions2);
+
+			var geocoder2 = new google.maps.Geocoder();
+
+			var address2;
+
+			var address2 = "21134 US Hwy 281 N #105, San Antonio, TX 78258";
+
+			geocoder2.geocode({ "address": address2 }, function(results, status) {
+
+   				if (status == google.maps.GeocoderStatus.OK) {
+
+       			map2.setCenter(results[0].geometry.location);
+   				} else {
+
+       			alert("Geocoding was not successful - STATUS: " + status);
+  			 }
+  			
+			});
+
+			var creamistry = { lat: 29.640997, lng: -98.453609 };
+
+			var marker = new google.maps.Marker({
+  				position: creamistry,
+    			map: map2
+			});
+
+			var infowindow = new google.maps.InfoWindow({
+    			content: "Creamistry: So much better than Orange Leaf."
+			});
+
+			infowindow.open(map2, marker);
+
+		
+			var mapOptions3 = {
+			// Set the zoom level
+				zoom: 20,
+
+			// This sets the center of the map at our location
+				center: {
+					lat:  29.640997,  
+					lng: -98.453609
+
+				}
+			};
+		
+			var map3 = new google.maps.Map(document.getElementById("map3"), mapOptions3);
+
+			var geocoder3 = new google.maps.Geocoder();
+
+			var address3;
+
+			var address3 = "21134 US Hwy 281 N #105, San Antonio, TX 78258";
+
+			geocoder3.geocode({ "address": address3 }, function(results, status) {
+
+   				if (status == google.maps.GeocoderStatus.OK) {
+
+       			map3.setCenter(results[0].geometry.location);
+   				} else {
+
+       			alert("Geocoding was not successful - STATUS: " + status);
+  			 }
+  			
+			});
+
+		})();
+		</script>
+	</body>
+</html>

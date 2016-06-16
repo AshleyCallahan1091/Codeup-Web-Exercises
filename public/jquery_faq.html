@@ -65,8 +65,36 @@
 			<dt>How can I avoid heat stress?</dt>
 			<dd>Air conditioning.</dd>
 		</dl>
+		<p></p>
+		<a href="#" id="reveal-important">Click to toggle the answers.</a>
+		<p></p>
+		<h3>Zion National Park</h3>
+		<ul>
+			<li>Zion National Park has hiking trails that range from 30 minutes to four hours and range from beginning to experienced hiking skills. If it's your first time ever hiking, maybe you should just stick to the hipster rockwalls downtown.</li>
+			<li>Only experienced climbers should attempt climbing the sandstone cliffs and should only go from March-May or September-November because they'll get melted by the sun (not really but you'll look like a leathered lobster when you're done).</li>
+			<li>If you like horseback-riding and aren't afraid of a huge animal possibly throwing you off its back and trampling you when it gets spooked by a squirrel, feel free to schedule a horseback tour.</li>
+			<li>Canyoneering is a real activity that combines finding routes, rappelling, swimming, hiking and other things that will get you killed in places where rangers won't find you until dental records are needed in order to track down your worried-sick mother. Why would you do that to her? Stay safe. Play Firewatch instead.</li>
+		</ul>
+		<p></p>
+		<h3>Yellowstone National Park</h3>
+		<ul>
+			<li>Annual precipitation ranges from 10 inches at the north boundary to 80 inches in the southwest corner. So basically it goes from Texas rain levels normally to Texas rain levels in May 2016.</li>
+			<li>Yellowstone has an active volcano. Seriously, why would you even come here?</li>
+			<li>There are 290 waterfalls in Yellowstone. The only reasonable time to even consider jumping from a waterfall is if an Androminous-Rex is chasing you.</li>
+			<li>There are 67 species of mammals, all of which you should avoid.</li>
+		</ul>
+		<p></p>
+		<h3>Grand Canyon National Park</h3>
+		<ul>
+			<li>The Grand Canyon is a chasm 277 miles long and up to 18 miles wide. Don't fall. No one will find you.</li>
+			<li>It is illegal to refuse a person a glass of water. Just think. A bartender at some backass saloon denied a man (because a woman would have brought sufficient water) a glass of water and he died of a heatstroke. I bet that bartender felt mighty guilty after that. Probably even paid for that guy's funeral.</li>
+			<li>It is also illegal to keep a donkey in your bathtub. I can't imagine why you would want to but if that's the only way your donkey will take a bath, maybe you should rethink living in Arizona.</li>
+			<li>Grand Canyon includes approximately 70 species of mammals, 250 species of birds, 25 types of reptiles and 5 species of amphibians. Avoid each and every one of them. They will eat you for sport. Okay, maybe not, but seriously. Common sense. Don't pet them, put them in your rocket or try to domesticate them and train them to eat from your hand. They'll get fat and follow you home. And then eat you.</li>
+		</ul>
 
-		 <a href="#" id="reveal-important">Click to toggle the answers.</a>
+
+
+		 
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
@@ -81,7 +109,14 @@
                 $('dd').toggleClass('invisible');
                 console.log("Work dammit")
             });
-       
+            
+			$("ul").each(function(index, element) {
+			$(element).children().first().css("font-weight", "bold");
+			})
+
+			$("li").click(function() {
+			$(this).parent().toggleClass("invisible");
+			})
 
 
 

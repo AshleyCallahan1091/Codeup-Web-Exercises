@@ -102,21 +102,31 @@
 			"use strict";
 
 			$("dd").addClass( "invisible" );
-
 		
-            $('#reveal-important').click(function(event) {
-                event.preventDefault();
-                $('dd').toggleClass('invisible');
-                console.log("Work dammit")
-            });
-            
-			$("ul").each(function(index, element) {
-			$(element).children().first().css("font-weight", "bold");
-			})
+			$("ul, h3").click(function() {
 
-			$("li").click(function() {
-			$(this).parent().toggleClass("invisible");
-			})
+				
+				$("li").toggleClass("invisible");
+				console.log("ul")
+
+			});
+
+
+
+
+   //          $('#reveal-important').click(function(event) {
+   //              event.preventDefault();
+   //              $('dd').toggleClass('invisible');
+   //              console.log("Work dammit")
+   //          });
+            
+			// $("ul").each(function(index, element) {
+			// $(element).children().first().css("font-weight", "bold");
+			// })
+
+			// $("dd").click(function() {
+   //              $('#national-parks').toggle();
+   //          });
 
 
 

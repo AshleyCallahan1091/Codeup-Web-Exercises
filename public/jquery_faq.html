@@ -88,12 +88,12 @@
 			$("dd").addClass( "invisible" );
 
 			$('.randomAssParksToggle').click(function() {
-        		$('.randomAssParks').fadeToggle();
+        		$('.randomAssParks').slideToggle();
     		});
 
             $('#reveal-important').click(function(event) {
                 event.preventDefault();
-                $('dd').fadeToggle('.invisible');
+                $('dd').slideToggle('.invisible');
                 console.log("Work dammit")
             });
             
@@ -102,7 +102,7 @@
 			})
 
 			$("dd").click(function() {
-                $('#national-parks').toggle();
+                $('#national-parks').slideToggle();
             });
 
 

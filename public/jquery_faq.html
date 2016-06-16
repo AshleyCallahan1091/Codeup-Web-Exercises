@@ -13,25 +13,9 @@
 	</head>
 	<body>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-		<script>
-			"use strict";
-
-			$("dd").addClass( "invisible" );
-
-		
-            $('#reveal-important').click(function(event) {
-                event.preventDefault();
-                $('dd').toggleClass('invisible');
-                //console.log("Work dammit")
-            });
-       
 
 
-
-
-		</script>
+	
 
 	<h1>National Parks</h1>
 		<dl>
@@ -103,30 +87,35 @@
 
 			$("dd").addClass( "invisible" );
 		
-			$("ul, h3").click(function() {
+			// $("ul, h3").click(function() {
 
 				
-				$("li").toggleClass("invisible");
-				console.log("ul")
+			// 	$("li").toggleClass("invisible");
+			// 	console.log("ul")
 
+			// });
+
+
+			$('ul, h3').click(function() {
+   			$("li").hide();
 			});
 
 
 
 
-   //          $('#reveal-important').click(function(event) {
-   //              event.preventDefault();
-   //              $('dd').toggleClass('invisible');
-   //              console.log("Work dammit")
-   //          });
+            $('#reveal-important').click(function(event) {
+                event.preventDefault();
+                $('dd').toggleClass('invisible');
+                console.log("Work dammit")
+            });
             
-			// $("ul").each(function(index, element) {
-			// $(element).children().first().css("font-weight", "bold");
-			// })
+			$("ul").each(function(index, element) {
+			$(element).children().first().css("font-weight", "bold");
+			})
 
-			// $("dd").click(function() {
-   //              $('#national-parks').toggle();
-   //          });
+			$("dd").click(function() {
+                $('#national-parks').toggle();
+            });
 
 
 

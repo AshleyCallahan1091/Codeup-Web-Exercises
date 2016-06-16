@@ -1,5 +1,5 @@
 'use strict';
-
+//student object - average function, stores name and grades and subjects
 var student = {
     awesomeGrade: 80,
     name: null,
@@ -23,14 +23,17 @@ var student = {
     }
 }
 
+var saveBtn1 = document.getElementById("add-grade"); //add and continue button
+
+var saveBtn2 = document.getElementById("calculate-average"); //average button
+
 
 
 
 function saveMe () {
-	var saveBtn1 = document.getElementById("add-grade");
+	
 	saveBtn1.removeAttribute("disabled");
 
-	var saveBtn2 = document.getElementById("calculate-average");
 	saveBtn2.removeAttribute("disabled");
 
 	var nameInput = document.getElementById("nameInput").value;
@@ -40,7 +43,8 @@ function saveMe () {
 
 	student.name = nameInput;
 }
-document.getElementById("save-name").addEventListener('click', saveMe, false);
+
+
 
 
 function addMe () {
@@ -55,11 +59,11 @@ function addMe () {
 
 	subjectTable.innerHTML = ('<tr><td>' + subjectName.value + '</td><td>' + subjectGrade.value + "</td></tr>" ) + subjectTable.innerHTML; //adds rows and subject/grade data to table
 
-	subjectName.value;
-	subjectGrade.value;
+    subjectName.value = "";
+    subjectGrade.value = "";
+
 }
 
-document.getElementById("add-grade").addEventListener('click', addMe, false);
 
 
 
@@ -67,9 +71,9 @@ function averageMe () {
 
 	addMe();
 
-	var average = student.calculateAverage();
+	var average = document.getElementById("student-average");
 
-	average = document.getElementById("student-average").innerText.addEventListener('click', averageMe, false);
+	average.innerHTML = student.calculateAverage();
 
 	if (student.isAwesome()) {
         document.getElementById('student-awesome').removeAttribute('class');
@@ -84,11 +88,19 @@ function averageMe () {
 
 	
 }
+document.getElementById("save-name").addEventListener('click', saveMe, false);
+
+document.getElementById("add-grade").addEventListener('click', addMe, false);
+
+saveBtn1.addEventListener('click', addMe);
+
+saveBtn2.addEventListener('click', averageMe);
 
 
-saveBtn1.addEventListener('click', saveMe);
-saveBtn2.addEventListener('click', addMe);
-averageMe.addEventListener('click', averageMe);
+var i = true;
+
+console.log(i);
+
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Smashley's Weather Extravaganza</title>
+	<link rel="stylesheet" href="css/weather_map.css">
+	<meta charset="utf-8">
+</head>
+	<body>
+		<div id="container">
+			<h1>Weather Application</h1>
+			<h3>San Antonio:</h3>
+			<div class="row">
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+					APPID: "edbbc57bcc4a6653e88babcb307e4bb1",
+					q:     "San Antonio, TX",
+					units: "imperial",
+					cnt: 3
+				}).done(function(forecast){
+					console.log(forecast);
+				forecast.list.forEach(function(weather){
+						var description = weather.weather[0].description;
+						var highTemp = weather.temp.max;
+						var lowTemp = weather.temp.min;
+						var humidity = weather.humidity;
+						$('.row').append('<div class=\"day\"><p>Temperature: ' + highTemp.toFixed(0) + '/' + lowTemp.toFixed(0) + "<p>" + weather.icon + "<p>" + description + "<p>" + "Humidity" + humidity + "<p>" + "Wind Speed: " + weather.speed + "</div>")
+						});
+
+				
+
+
+				});
+				
+				
+		</script>
+	</body>
+</html>
+
+

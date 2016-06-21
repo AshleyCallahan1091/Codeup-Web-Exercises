@@ -1,11 +1,37 @@
 div.day {
 
+	margin-left: 33%;
 	border: 1px solid black;
 	margin: 20px;
 	text-align: center;
-	width: 100px;
+	width: 200px;
 	position: relative;
 	float: left;
+	background-color: aquamarine;
 
 
+}
+
+body{
+
+	background-color: papayawhip;
+}
+
+
+
+
+
+
+h1 {
+
+	text-align: center;
+}
+
+
+
+
+
+
+h3 {
+	text-align: center;
 }

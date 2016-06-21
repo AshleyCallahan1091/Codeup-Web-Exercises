@@ -14,16 +14,12 @@
 			</div>
 		</div>
 
-
 		<div id="map">
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd1TXiwJvWwwc7wFYtny6B62-l2JkMZ4E"></script>
-
-
-
 
 		<script>
 			(function() {
@@ -37,25 +33,17 @@
 					lng: -98.453609
 				}
 			};
-			
-
 	   
 			var cityState = "San Antonio, TX";
-			
-		
 			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
 			var geocoder = new google.maps.Geocoder();
-
 			var marker = new google.maps.Marker({
     			position: mapOptions.center,
     			map: map,
     			draggable: true
 			});
 
-
 			function geocodeAddress(){
-
 				geocoder.geocode({ "address": cityState }, function(results, status) {
 
    					if (status == google.maps.GeocoderStatus.OK) {
@@ -68,12 +56,10 @@
 
   			 		google.maps.event.addListener(marker, "dragend", function(event) {
   			 			updateWeather(event.latLng)
-
 					})
   			 		updateWeather(results[0].geometry.location);
 				});
 			}
-
 				
 			function updateWeather(latLng){		
 				var config = {
@@ -98,17 +84,12 @@
 						})
 					})
 			}
-
-
             // $('#submitButton').click(function() {
             //     cityState = $("#cityName").val();
             //     geocodeAddress();
 
             // });
-       
             geocodeAddress();
-
-
 		})();
 				
 		</script>

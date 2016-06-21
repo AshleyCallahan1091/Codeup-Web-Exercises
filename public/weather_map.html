@@ -5,41 +5,111 @@
 	<link rel="stylesheet" href="css/weather_map.css">
 	<meta charset="utf-8">
 </head>
-	<body>
-		<div id="container">
+	<div id="container">
 			<h1>Weather Application</h1>
 			<h3>San Antonio:</h3>
+			<p>Enter a City, State: <input type="text" name="city" id="cityName">
+			<p><button id="submitButton">Submit</button>
 			<div class="row">
 			</div>
 		</div>
+
+
+		<div id="map">
+		</div>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd1TXiwJvWwwc7wFYtny6B62-l2JkMZ4E"></script>
+
+
+
+
 		<script>
-			$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-					APPID: "edbbc57bcc4a6653e88babcb307e4bb1",
-					q:     "San Antonio, TX",
-					units: "imperial",
-					cnt: 3
-				}).done(function(forecast){
-					console.log(forecast);
-				forecast.list.forEach(function(weather){
-						var description = weather.weather[0].description;
-						var highTemp = weather.temp.max;
-						var lowTemp = weather.temp.min;
-						var humidity = weather.humidity;
-						var weatherIcon = weather.weather[0].icon;
-						$('.row').append('<div class=\"day\"><p><strong>Temperature:</strong> ' + highTemp.toFixed(0) + '/' + lowTemp.toFixed(0) + "<p>" + "<img src=\"http://openweathermap.org/img/w/" + weatherIcon + ".png\" alt=\"weather icon\">" +"<p>" + description + "<p>" + "<strong>Humidity: </strong>" + humidity + "<p>" + "<strong>Wind Speed: </strong>" + weather.speed + "</div>")
-						});
+			(function() {
+			 "use strict";
 
-				// geocoder.geocode({ address: location }, function(results, status){
+			 var mapOptions = {
+		
+				zoom: 14,
+				center: {
+					lat:  29.640997,  
+					lng: -98.453609
+				}
+			};
+			
 
-				// 	map.setCenter(results[0].geometry.location);
-				// 	createMarkerForLocation(results[0].geometry.location);
+	   
+			var cityState = "San Antonio, TX";
+			
+		
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-				// }
+			var geocoder = new google.maps.Geocoder();
+
+			var marker = new google.maps.Marker({
+    			position: mapOptions.center,
+    			map: map,
+    			draggable: true
+			});
 
 
+			function geocodeAddress(){
+
+				geocoder.geocode({ "address": cityState }, function(results, status) {
+
+   					if (status == google.maps.GeocoderStatus.OK) {
+       					map.setCenter(results[0].geometry.location);
+   					} else {
+       					alert("Location could not be found. Please enter another City, State.");
+  			 		}
+
+  			 		marker.setPosition(results[0].geometry.location);
+
+  			 		google.maps.event.addListener(marker, "dragend", function(event) {
+  			 			updateWeather(event.latLng)
+
+					})
+  			 		updateWeather(results[0].geometry.location);
 				});
+			}
+
 				
+			function updateWeather(latLng){		
+				var config = {
+					APPID: "edbbc57bcc4a6653e88babcb307e4bb1",
+					units: "imperial",
+					cnt: 3,
+					lat: latLng.lat(),
+					lon: latLng.lng()
+				};
+
+				$.get("http://api.openweathermap.org/data/2.5/forecast/daily", config
+					).done(function(forecast){
+						console.log(forecast);
+						$(".row").html("");
+						forecast.list.forEach(function(weather){
+							var description = weather.weather[0].description;
+							var highTemp = weather.temp.max;
+							var lowTemp = weather.temp.min;
+							var humidity = weather.humidity;
+							var weatherIcon = weather.weather[0].icon;
+							$('.row').append('<div class=\"day\"><p><strong>Temperature:</strong> ' + highTemp.toFixed(0) + '/' + lowTemp.toFixed(0) + "<p>" + "<img src=\"http://openweathermap.org/img/w/" + weatherIcon + ".png\" alt=\"weather icon\">" +"<p>" + description + "<p>" + "<strong>Humidity: </strong>" + humidity + "<p>" + "<strong>Wind Speed: </strong>" + weather.speed + "</div>")
+						})
+					})
+			}
+
+
+            $('#submitButton').click(function() {
+                cityState = $("#cityName").val();
+                geocodeAddress();
+
+            });
+       
+            geocodeAddress();
+
+
+		})();
 				
 		</script>
 	</body>

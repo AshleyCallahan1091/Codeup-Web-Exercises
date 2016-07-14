@@ -97,7 +97,7 @@ saveBtn1.addEventListener('click', addMe);
 saveBtn2.addEventListener('click', averageMe);
 
 
-var i = true;
+
 
 console.log(i);
 

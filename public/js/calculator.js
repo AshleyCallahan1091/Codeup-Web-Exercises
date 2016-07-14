@@ -5,7 +5,8 @@ var operationButtons = document.getElementsByClassName("operator");
 var digits = document.getElementsByClassName("digits");
 var equalsMagic = document.getElementById("eval");
 var eraseAllTheThings = document.getElementsByClassName("clear");
-var no = document.getElementById("decimal");
+var decimal = document.getElementById("decimal");
+
 
 function signsInput () {
 	var operator = this.innerHTML;
@@ -32,13 +33,13 @@ for (var i = 0; i < operationButtons.length; i++) {
 function doMath () {
 
 	if (operatorMagic.value == "+") {
-		textFirst.value = parseInt(textFirst.value) + parseInt(textSecond.value); 
+		textFirst.value = parseFloat(textFirst.value) + parseFloat(textSecond.value); 
 	} else if (operatorMagic.value == "-") {
-		textFirst.value = parseInt(textFirst.value) - parseInt(textSecond.value); 
+		textFirst.value = parseFloat(textFirst.value) - parseFloat(textSecond.value); 
 	} else if (operatorMagic.value == "/") {
-		textFirst.value = parseInt(textFirst.value) / parseInt(textSecond.value); 
+		textFirst.value = parseFloat(textFirst.value) / parseFloat(textSecond.value); 
 	} else if (operatorMagic.value == "x") {
-		textFirst.value = parseInt(textFirst.value) * parseInt(textSecond.value); 
+		textFirst.value = parseFloat(textFirst.value) * parseFloat(textSecond.value); 
 	} 
 	textSecond.value = '';
 	operatorMagic.value = '';
@@ -56,13 +57,34 @@ function eraseBadMath () {
 	textSecond.value = "";
 }
 
-function nope() {
-	alert("NOT TODAY.");
-	textFirst.value = "Nope!";
-	textSecond.value = "Nein.";
-	operatorMagic.value = "Nyet."
+function addDecimal(){
+	var decimalValue = document.getElementById("decimal").getAttribute("data-value")
+	if (operatorMagic.value == "") {
+		console.log(textFirst.value.indexOf(decimalValue) != -1, decimalValue);
+
+		if (textFirst.value.indexOf(decimalValue) != -1) {
+			return;
+		}
+
+		if (textFirst.value == "") {
+			textFirst.value = "0" + decimalValue;
+		} else {
+			textFirst.value = parseInt(textFirst.value) + decimalValue;
+		}
+		}
+	else {
+		if (textSecond.value.indexOf(decimalValue) != -1) {
+			return;
+		}
+
+		if (textSecond.value == "") {
+			textSecond.value = "0" + decimalValue;
+		} else {
+			textSecond.value = parseInt(textSecond.value) + decimalValue;
+		}
+	}
 }
 
 clear();
 equalsMagic.addEventListener("click", doMath); 
-no.addEventListener("click", nope);
+decimal.addEventListener("click", addDecimal);

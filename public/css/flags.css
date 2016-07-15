@@ -9,11 +9,8 @@ h1 {
 	width: 600px;
 }
 
-
-
 /*France*/
 #france-blue {
-	
 	background-color: navy;
 	position: relative;
 	width: 33%;
@@ -27,18 +24,15 @@ h1 {
 	width: 600px;
 	position: relative;
 	background-color: #FFFFFF;
-
 }
+
 #france-red {
 	float: right;
 	background-color: red;
 	position: relative;
 	width: 33%;
 	height: 100%;
-
 }
-
-
 
 /*Ireland*/
 #ireland-green {
@@ -66,12 +60,8 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Belgium*/
-
 #belgium-black {
-	
 	background-color: black;
 	position: relative;
 	width: 33%;
@@ -95,12 +85,8 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Chad*/
-
 #chad-navy {
-	
 	background-color: navy;
 	position: relative;
 	width: 33%;
@@ -124,12 +110,8 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Guinea*/
-
 #guinea-red {
-	
 	background-color: red;
 	position: relative;
 	width: 33%;
@@ -153,10 +135,7 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Ivory Coast*/
-
 #ivory-orange {
 	background-color: orange;
 	position: relative;
@@ -181,12 +160,8 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Italy*/
-
 #italy-green {
-	
 	background-color: green;
 	position: relative;
 	width: 33%;
@@ -200,8 +175,8 @@ h1 {
 	width: 600px;
 	position: relative;
 	background-color: #FFFFFF;
-
 }
+
 #italy-red {
 	float: right;
 	background-color: red;
@@ -211,12 +186,8 @@ h1 {
 
 }
 
-
-
 /*Mali*/
-
 #mali-green {
-	
 	background-color: green;
 	position: relative;
 	width: 33%;
@@ -230,23 +201,18 @@ h1 {
 	width: 600px;
 	position: relative;
 	background-color: gold;
-
 }
+
 #mali-red {
 	float: right;
 	background-color: red;
 	position: relative;
 	width: 33%;
 	height: 100%;
-
 }
 
-
-
 /*Nigeria*/
-
 #nigeria-forest {
-	
 	background-color: #228B22;
 	position: relative;
 	width: 33%;
@@ -270,13 +236,8 @@ h1 {
 	height: 100%;
 }
 
-
-
-
-/*Chad*/
-
+/*Romania*/
 #romania-navy {
-	
 	background-color: navy;
 	position: relative;
 	width: 33%;
@@ -300,12 +261,8 @@ h1 {
 	height: 100%;
 }
 
-
-
 /*Germany*/
-
 #germany-black {
-	
 	background-color: black;
 	position: relative;
 	width: 100%;
@@ -330,12 +287,8 @@ h1 {
 	height: 33%;
 }
 
-
-
 /*Armenia*/
-
 #armenia-red {
-	
 	background-color: red;
 	position: relative;
 	width: 100%;
@@ -360,12 +313,8 @@ h1 {
 	height: 33%;
 }
 
-
-
 /*Austria*/
-
 #austria-red {
-	
 	background-color: red;
 	position: relative;
 	width: 100%;
@@ -390,9 +339,7 @@ h1 {
 	height: 33%;
 }
 
-
 /*Botswana*/
-
 #botswana-blue {
 	
 	background-color: #87CEEB;
@@ -421,10 +368,8 @@ h1 {
 	border-bottom: 10px solid white;
 }
 
-
-
+/*Bulgaria*/
 #bulgaria-white {
-	
 	background-color: white;
 	position: relative;
 	width: 100%;

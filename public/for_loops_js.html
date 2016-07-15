@@ -7,80 +7,50 @@
 		<script>
 			"use strict";
 
-			//numbers wtf-ery
+				//numbers wtf-ery
+				
 			var wtf;
 			for (var i = 1; i <= 10; i++) {
-				
 				wtf = "";
-
 				for (var j = 1; j <= i; j++) {
-				
-					if (i == 10)
-					{
+					if (i == 10){
 						wtf = wtf + 0
-
 					}
 					else { 
 						wtf = wtf + i
 					}
-					}
-
-				 console.log(wtf)
+				}
+				console.log(wtf)
 
 			}
-
 
 
 			//multiplication table
 
 
 			var random = Math.floor(Math.random() * 10) + 1;
-
 			for (var i = 1; i <= 10; i++) {
-				
 				console.log(random + "x" + i + "=" + (random * i));
 			}
-
-
 
 			//odd/even
 			
 
 			for (var i = 0; i < 10; i++) {
-
 				var iHaveNoIdea = Math.floor(Math.random() * 180) + 20;
-				
 				if (iHaveNoIdea % 1) {
-
-				console.log(iHaveNoIdea + " is odd.");
-
+					console.log(iHaveNoIdea + " is odd.");
 				} else if (iHaveNoIdea % 0) {
-
 					console.log(iHaveNoIdea + " is even.")
 				}
 			}
 
 
-
-
 			//Easy problem
 
 			for (var i = 100; i >= 5; i = (i - 5)) {
-
 				console.log(i)
 			}
-
-
-
-
-
-
-
-
-
-
-
-
 		</script>
 	</body>
 </html>

@@ -13,17 +13,17 @@
 		<p>
 		<label for="username">Username</label>
 		<input  id="username" name="username" type="text" placeholder="Enter Username">
-	</p>
-	<p>
+		</p>
+		<p>
 		<label for="password">Password</label>
 		<input id="password" name="password" type="password" placeholder="Enter Password">
-	</p>
-	<p>
+		</p>
+		<p>
 		<button type="submit"> Hit me!</button>
-	</p>
-	</form>
+		</p>
+		</form>
 
-	<form method="POST" action="/my_first_form.php">
+		<form method="POST" action="/my_first_form.php">
 			<div>
 			<h1>Compose an Email</h1>
 				<label for="to">To</label>
@@ -49,7 +49,7 @@
 
 		<form method="POST" action="/my_first_form.php">
 			<div>
-			<h1>Multiple Choice Test</h1>
+				<h1>Multiple Choice Test</h1>
 			</div>
 			<div>
 				How many states are in the United States?
@@ -77,7 +77,6 @@
 				What year is it?
 			</div>
 			<div>
-
 				<label>
 					<input type="radio" name="q2" value="2015" checked>
 					2015
@@ -94,10 +93,10 @@
 					<input type="radio" name="q2" value="2017">
 					2017
 				</label>
-				</div>
-				<div>
+			</div>
+			<div>
 				<button type="submit">Submit</button>
-				</div>
+			</div>
 			<div> 
 				Which artists do you like?
 			</div>
@@ -121,11 +120,11 @@
 			<div>
 				<button type="submit">Submit</button>
 			</div>
-
-			<div>
+		</form>
+		<div>
 			<form method="POST" action="http://requestb.in/1lw71oq1">
 			<p>
-			<h1>Select Testing</h1>
+				<h1>Select Testing</h1>
 			</p>
 				<label for="os"> Do you like Captain America?</label>
 				<select id="captain_america" name="captain_america">
@@ -134,8 +133,6 @@
 				</select>
 				<button type="submit">Submit</button>
 			</form>
-			</div>
-
-
+		</div>
 	</body>
-	</html>
+</html>

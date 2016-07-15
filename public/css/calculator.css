@@ -18,14 +18,12 @@ h1 {
 	line-height: 36px;
 	text-align: center;
 	user-select: none;
-
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
 }
 
 html {
@@ -55,15 +53,11 @@ html {
 .top .screen {
 	height: 40px;
 	width: 212px;
-	
 	float: right;
-	
 	padding: 0 10px;
-	
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 3px;
 	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
-	
 	/* Typography */
 	font-size: 17px;
 	line-height: 40px;
@@ -114,7 +108,5 @@ html {
 
 .keys span:hover {
 	background: #47682C;
-	
 	color: white;
 }
-

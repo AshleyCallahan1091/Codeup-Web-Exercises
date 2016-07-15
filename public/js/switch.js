@@ -6,7 +6,6 @@ var luckyNumber = Math.floor(Math.random()* 6);
 
 var receipt = 60;
 
-
 switch (luckyNumber) {
     case 0:
         console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then your receipt will be $" + receipt);
@@ -26,7 +25,6 @@ switch (luckyNumber) {
     case 5:
         console.log("If your receipt is $" + receipt + " and your number is " + luckyNumber  + " then you get it all for free!");
 }
-
 
 //Month
 
@@ -69,6 +67,4 @@ switch (monthNumber) {
     case 12:
         console.log("December");
         break;
-   
-    
 }

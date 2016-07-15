@@ -3,25 +3,16 @@
 "use strict";
 
 var grade1 = 70;
-
 var grade2 = 80;
-
 var grade3 = 95;
-
 var awesomeGrade = 80;
-
 var combinedGrades = (grade1 + grade2 + grade3);
-
 var numberOfGrades = 3;
-
 var avgGrades = (combinedGrades / numberOfGrades);
 
 if (avgGrades >= awesomeGrade) {
-
 	console.log("You're Awesome!")
-
 } else {
-
 	console.log("You need to practice more.")
 }
 
@@ -30,13 +21,9 @@ if (avgGrades >= awesomeGrade) {
 
 
 var cameron = 180;
-
 var ryan = 250;
-
 var george = 320;
-
 var discount = .35;
-
 var qualified = 200
 
 if (cameron > qualified) {
@@ -57,9 +44,6 @@ if (george > qualified) {
 	console.log("George spent $" + george.toFixed(2));
 }
 
-
-
-
 //Life Choices
 
 var flipACoin = Math.floor(Math.random()* 2)
@@ -73,9 +57,4 @@ var flipACoin = Math.floor(Math.random()* 2)
 //}
 
 
-var flipACoin = 1 ? "Buy a house!" : "Buy a car!"
-
-
-
-
-
+var flipACoin = 1 ? "Buy a house!" : "Buy a car!";

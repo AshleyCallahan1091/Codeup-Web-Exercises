@@ -9,15 +9,10 @@
 		}
 
 		</style>
-
 	</head>
 	<body>
 
-
-
-	
-
-	<h1>National Parks</h1>
+		<h1>National Parks</h1>
 		<dl>
 			<dt>Can I bring a gun to Yellowstone National Park?</dt>
 			<dd>Yes, guns are permitted in Yellowstone National Park.</dd>
@@ -76,10 +71,6 @@
 			<li>Grand Canyon includes approximately 70 species of mammals, 250 species of birds, 25 types of reptiles and 5 species of amphibians. Avoid each and every one of them. They will eat you for sport. Okay, maybe not, but seriously. Common sense. Don't pet them, put them in your rocket or try to domesticate them and train them to eat from your hand. They'll get fat and follow you home. And then eat you.</li>
 		</ul>
 
-
-
-		 
-
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 		<script>
@@ -88,26 +79,22 @@
 			$("dd").addClass( "invisible" );
 
 			$('.randomAssParksToggle').click(function() {
-        		$('.randomAssParks').slideToggle();
-    		});
+				$('.randomAssParks').slideToggle();
+			});
 
-            $('#reveal-important').click(function(event) {
-                event.preventDefault();
-                $('dd').slideToggle('.invisible');
-                console.log("Work dammit")
-            });
-            
+			$('#reveal-important').click(function(event) {
+				event.preventDefault();
+				$('dd').slideToggle('.invisible');
+				console.log("Work dammit")
+			});
+			
 			$("ul").each(function(index, element) {
 			$(element).children().first().css("font-weight", "bold");
 			})
 
 			$("dd").click(function() {
-                $('#national-parks').slideToggle();
-            });
-
-
-
-
+				$('#national-parks').slideToggle();
+			});
 		</script>
 	</body>
 </html>

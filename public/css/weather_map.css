@@ -8,48 +8,26 @@ div.day {
 	position: relative;
 	float: left;
 	background-color: aquamarine;
-
-
 }
 
 body{
-
 	background-color: papayawhip;
 }
 
-
-
-
-
-
 h1 {
-
 	text-align: center;
 }
-
-
-
-
-
 
 h3 {
 	text-align: center;
 }
 
 #cityInput {
-
 	position: relative;
 	float: left;
-
-
 }
 
-
 #map {
-
 	width: 700px;
 	height: 700px;
-
-
-
 }

@@ -1,7 +1,6 @@
 var gradesPush;
 var gradesAgain;
 
-
 var object = {
 	gradeAverage : function () {
 		var gradesTotal = 0

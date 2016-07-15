@@ -6,9 +6,6 @@
 	<body>
 		<script>
 			"use strict";
-			/*
-			 * How many times a lucky number is repeated for every 100 customers?
-			 */
 			var luckyNumber;
 			var i = 1;
 			var a = 0;
@@ -17,67 +14,36 @@
 			var d = 0;
 			var e = 0;
 			var f = 0;
-
-
 			do  {
-
 				luckyNumber = Math.floor(Math.random()* 6);
-				
 				switch (luckyNumber) {
-				    case 0:
-				        a++;
-				        break;
-				    case 1:
-				        b++;
-				        break;
-				    case 2:
-				        c++;
-				        break;
-				    case 3:
-				    	d++;
-				    	break;
-				    case 4:
-				       e++;
-				        break;
-				    case 5:
-				       f++;
-				        break;
+					case 0:
+						a++;
+						break;
+					case 1:
+						b++;
+						break;
+					case 2:
+						c++;
+						break;
+					case 3:
+						d++;
+						break;
+					case 4:
+						e++;
+						break;
+					case 5:
+						f++;
+						break;
 				}
-
 				i++;
-				
 			} while (i < 100);
-
-				
-				console.log("0 appeared " + a + " times");
-			
-				console.log("1 appeared " + b + " times");
-				
-				console.log("2 appeared " + c + " times");
-				
-				console.log("3 appeared " + d + " times");
-			
-				console.log("4 appeared " + e + " times");
-				
-				console.log("5 appeared " + f + " times");
-				
-
-
-			// The output should be something like
-
-			// 0 appeared 10 times
-			// 1 appeared 20 times
-			// 2 appeared 15 times
-			// 3 appeared 35 times
-			// 4 appeared 4 times
-			// 5 appeared 16 times
-
-			// The total should be 100
-
-
-
-
-
+			console.log("0 appeared " + a + " times");
+			console.log("1 appeared " + b + " times");
+			console.log("2 appeared " + c + " times");
+			console.log("3 appeared " + d + " times");
+			console.log("4 appeared " + e + " times");
+			console.log("5 appeared " + f + " times");
 		</script>
 	</body>
 </html>

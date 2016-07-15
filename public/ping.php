@@ -26,9 +26,9 @@ extract(pageController());
 	<title></title>
 </head>
 <body>
-
-<a  href="counter.php?counter=<?= $counter + 1 ?>">Up!</a>
-	<a  href="counter.php?counter=<?= $counter - 1 ?>">Down!</a>
+	<h1>Score: <?= $counter ?>  </h1>
+	<a  href="pong.php?outcome=hit&counter=<?= $counter + 1 ?>">Hit!</a>
+	<a  href="pong.php?outcome=miss&counter=<?= $counter = 0 ?>">Miss!</a>
 
 
 </body>

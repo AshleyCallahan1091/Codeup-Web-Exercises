@@ -1,12 +1,12 @@
 <?php
 
-function pageController(){
-	$data = [];
-	$data['adjectives'] = ['pearl', 'clear', 'rough', 'ice', 'moon', 'blurred', 'light', 'glass', 'piercing', 'wild'];
-	$data['nouns'] = ['ink', 'water', 'grass', 'mask', 'shield', 'boot', 'moon', 'ribbon', 'soldier', 'sailboat'];
-	$data['adjective'] = array_rand ( $data['adjectives'], 1 );
-	$data['noun'] = array_rand ( $data['nouns'], 1 );
-	return $data;
+	function pageController(){
+		$data = [];
+		$data['adjectives'] = ['pearl', 'clear', 'rough', 'ice', 'moon', 'blurred', 'light', 'glass', 'piercing', 'wild'];
+		$data['nouns'] = ['ink', 'water', 'grass', 'mask', 'shield', 'boot', 'moon', 'ribbon', 'soldier', 'sailboat'];
+		$data['adjective'] = array_rand ( $data['adjectives'], 1 );
+		$data['noun'] = array_rand ( $data['nouns'], 1 );
+		return $data;
 	}
 
 	extract(pageController());
@@ -33,15 +33,12 @@ function pageController(){
 		<!-- jQuery -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/modernizr.custom.js"></script>
-		
 
 		<!-- Custom Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 	</head>
-
 	<body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
 		<!-- ========== HEADER SECTION ========== -->
 		<section id="home" name="home"></section>
 		<div id="headerwrap">
@@ -58,15 +55,12 @@ function pageController(){
 				</div>
 			</div>
 		</div>
-
 		<!-- ========== CAROUSEL SECTION ========== --> 
 		<section id="portfolio" name="portfolio"></section>
 		<div id="f">
 		</div>  
-
 		<!-- Bootstrap core JavaScript
 		================================================== -->
-		
 		<script src="assets/js/classie.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/smoothscroll.js"></script>

@@ -1,35 +1,24 @@
 <?php 
 
-function pageController (){
-	$data = [];
-	
-	
+	function pageController (){
+		$data = [];
+		$data['counter'] = isset($_GET['counter']) ? $_GET['counter'] : 0;
 
-	if (isset($_GET['counter'])) {
-		$data['counter'] = $_GET['counter'];
-
-	} else {
-		$data['counter'] = 0;
-
+		return $data;
 	}
 
-	return $data;
-}
-
-extract(pageController());
+	extract(pageController());
 
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1>Score: <?= $counter ?>  </h1>
-	<a  href="pong.php?outcome=hit&counter=<?= $counter + 1 ?>">Hit!</a>
-	<a  href="pong.php?outcome=miss&counter=<?= $counter = 0 ?>">Miss!</a>
-
-
-</body>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>Score: <?= $counter ?>  </h1>
+		<a  href="/pong.php?outcome=hit&amp;counter=<?= $counter + 1 ?>">Hit!</a>
+		<a  href="/pong.php?outcome=miss&amp;counter=<?= $counter = 0 ?>">Miss!</a>
+	</body>
 </html>

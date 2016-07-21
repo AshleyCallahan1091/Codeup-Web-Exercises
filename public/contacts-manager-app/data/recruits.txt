@@ -1,0 +1,23 @@
+Steve Rogers|1231231234
+Natalia Romanoff|2342342345
+Bruce Banner|3453453456
+Tony Stark|4564564567
+Clint Barton|5675675678
+Thor Odinson|6786786789
+Stephen Strange|7897897890
+Wanda Maximoff|8908908900
+Pietro Maximoff|9009009098
+Phil Coulson|0980980987
+Peter Parker|9879879876
+Sam Wilson|8768768765
+Scott Lang|7657657654
+Charles Xavier|1232343456
+Erik Lehnsherr|3453455678
+Scott Summers|6787678909
+Bobby Drake|2212344357
+Warren Worthington III|4567890823
+Hank McCoy|4351273906
+Jean Grey|7829048293
+Calvin Rankin|7813892391
+Alexander Summers|2381637890
+Lorna Dane|8392947123

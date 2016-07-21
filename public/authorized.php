@@ -1,7 +1,23 @@
  <?php 
+ function pageController (){
 
+ 	session_start();
 
+ 	$reset = isset($_GET['reset']) ? $_GET['reset'] : 0;
 
+ 	if (!isset($_SESSION['logged_in_user'])){
+ 		header('Location: login.php');
+ 		exit();
+ 	} elseif ($reset == 1) {
+ 		session_destroy();
+		session_unset($_SESSION['logged_in_user']);
+		session_regenerate_id(true);
+ 		header('Location: login.php');
+ 	}
+ 	return ['reset' => $reset];
+ }
+
+	extract(pageController());
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +31,15 @@
 		<div class="alert alert-success">
 		  <strong>Success!</strong> Welcome!
 		</div>
+		<a href='authorized.php?reset=1'><button class="buttons">Log Out</button></a>
+
+
+
+
+
+
+
+
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Bootstrap Core JavaScript -->

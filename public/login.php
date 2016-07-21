@@ -1,5 +1,6 @@
 <?php
 	function pageController(){
+		session_start();
 		$data = [];
 
 		$data['username'] = "Guest";
@@ -7,13 +8,21 @@
 
 		 $suppliedUsername = isset($_POST['username']) ? $_POST['username'] : "";
 		 $suppliedPassword = isset($_POST['password']) ? $_POST['password'] : "";
-
-		if ($data['username'] === $suppliedUsername && $data['password'] === $suppliedPassword) {
+		if (isset($_SESSION['logged_in_user'])){
 			header("Location: authorized.php");
 			exit();
-		} elseif (($suppliedUsername !== "" && $suppliedUsername !== $data['username']) && ($suppliedPassword !== "" && $data['password'] !== $suppliedPassword)) {
+		}
+		elseif ($data['username'] === $suppliedUsername && $data['password'] === $suppliedPassword) {
+			$_SESSION['logged_in_user'] = $data['username'];
+			header("Location: authorized.php");
+			exit();
+		} elseif (($suppliedUsername !== "" && $suppliedUsername !== $data['username']) || ($suppliedPassword !== "" && $data['password'] !== $suppliedPassword)) {
 			echo "<div class='alert alert-danger'><strong>Danger!</strong> Invalid username or password supplied!</div>";
 		} 
+
+		
+		
+
 		return $data;
 	}
 	extract(pageController());
@@ -29,7 +38,6 @@
 	</head>
 	<body>
 		<div id="noty-holder"></div>
-		
 		<div class="container">
 			<div class="row" style="margin-top:20px">
 				<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">

@@ -1,10 +1,11 @@
 <?php 
 
-	function pageController (){
-		$data = [];
-		$data['counter'] = isset($_GET['counter']) ? $_GET['counter'] : 0;
+require_once '../src/Input.php';
 
-		return $data;
+	function pageController (){
+		return [
+		'counter' => Input::get('counter', 0),
+		];
 	}
 
 	extract(pageController());

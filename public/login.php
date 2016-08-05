@@ -1,31 +1,31 @@
 <?php
+
+ require_once "../src/auth.php";
+ require_once "../src/Input.php";
+ 
 	function pageController(){
 		session_start();
-		$data = [];
+		
+		 $username = Input::has('username') ? Input::get('username') : null;
+		 $password = Input::has('password') ? Input::get('password') : null;
 
-		$data['username'] = "Guest";
-		$data['password'] = "password";
 
-		 $suppliedUsername = isset($_POST['username']) ? $_POST['username'] : "";
-		 $suppliedPassword = isset($_POST['password']) ? $_POST['password'] : "";
-		if (isset($_SESSION['logged_in_user'])){
-			header("Location: authorized.php");
-			exit();
+		if(Auth::check()){
+			Auth::redirect('authorized.php');
 		}
-		elseif ($data['username'] === $suppliedUsername && $data['password'] === $suppliedPassword) {
-			$_SESSION['logged_in_user'] = $data['username'];
-			header("Location: authorized.php");
-			exit();
-		} elseif (($suppliedUsername !== "" && $suppliedUsername !== $data['username']) || ($suppliedPassword !== "" && $data['password'] !== $suppliedPassword)) {
-			echo "<div class='alert alert-danger'><strong>Danger!</strong> Invalid username or password supplied!</div>";
+
+
+		if (Auth::attempt($username, $password)){
+
+			Auth::redirect('authorized.php');
+		
+		} elseif (Auth::attempt($username, $password) === false) {
+			echo "<div class='alert alert-danger'><strong>Danger!</strong> Invalid username or password supplied!</div>"; //fix me
 		} 
 
 		
-		
-
-		return $data;
 	}
-	extract(pageController());
+	pageController();
 
 ?>
 

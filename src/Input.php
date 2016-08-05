@@ -27,6 +27,11 @@ class Input
         return self::has($key) ? $_REQUEST[$key] : $default;
     }
 
+     public static function isPost()
+    {
+        return $_SERVER['REQUEST_METHOD'] === 'POST';
+    }
+
     ///////////////////////////////////////////////////////////////////////////
     //                      DO NOT EDIT ANYTHING BELOW!!                     //
     // The Input class should not ever be instantiated, so we prevent the    //

@@ -15,13 +15,6 @@ require '../new-parks.php';
    
 //turn into prepared 
 
-
-
-
-
-
-
-
    $page = Input::get('page', 1);
 
    if ($page < 1) {
@@ -60,7 +53,7 @@ extract(pageController($dbc));
 			</header>
 		</div>
 	
-		<form>
+		<form method="post">
 			<div class="col-sm-6">
 				<input
 					type="text"

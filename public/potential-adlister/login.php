@@ -8,17 +8,11 @@
 <html>
 	<head>
 		<title>Login</title>
-		<!--<script src="js/login.js"></script>
-		<script src="Cool Codeup Stuff/Bootstrap/bootstrap-3.3.6-dist/js/npm.js"></script>
-		<script src="Cool Codeup Stuff/Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.js"></script>
 
-		<script src="Cool Codeup Stuff/Bootstrap/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-		
-		<link rel="stylesheet" href="Cool Codeup Stuff/Bootstrap/bootstrap-3.3.6-dist/css/bootstrap-theme.css">
 
-		<link rel="stylesheet" href="Cool Codeup Stuff/Bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css">-->
+		<link rel="stylesheet" href="bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css">
 
-		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="login.css">
 		
 
 
@@ -108,9 +102,12 @@
 
 
 
+        <script src="bootstrap/js/npm.js"></script>
+        <script src="bootstrap/bootstrap.js"></script>
 
+        <script src="bootstrap/bootstrap.min.js"></script>
 
-		
+		<script src="login.js"></script>
 
 	</body>
 </html>

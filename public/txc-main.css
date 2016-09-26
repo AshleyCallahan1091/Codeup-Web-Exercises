@@ -7,39 +7,6 @@
 	body{
 		margin:0px;
 		font-family: 'Open Sans', Sans-Serif;
-		
-	}
-
-	section{
-
-		display:flex;
-		justify-content:flex-start;
-		align-items:center;
-		
-		
-		-webkit-column-count: 2; /* Chrome, Safari, Opera */
-   		-moz-column-count: 2; /* Firefox */
-   		column-count: 2;
-
-		-webkit-column-rule: 1px solid grey; /* Chrome, Safari, Opera */
-	    -moz-column-rule: 1px solid grey; /* Firefox */
-	    column-rule: 1px solid grey;
-	}
-
-	article{
-		
-		margin:20px;
-		-webkit-column-span: all; /* Chrome, Safari, Opera */
-    	column-span: all;
-
-		/*media query to make them stack for mobile view (less than 600px screen width)*/
-
-	}
-
-	img{
-		height:40vh;
-		display:flex;
-		justify-content:center;
 	}
 
 	footer{
@@ -49,9 +16,9 @@
 		background-color:black;
 		justify-content:center;
 		align-items:center;
+		position: absolute;
+		width:100%;
 	}
-
-
 
 /*Texas Landscapes*/
 
@@ -59,10 +26,9 @@
 		display:flex;
 		background-image:url("/images/texas_roadside_evening.jpg");
 		background-size: cover;
-		height:100vh;
+		min-height:100vh;
 		justify-content: center;
 		align-items:flex-end;
-		
 	}
 
 	#hero>h1{
@@ -74,5 +40,70 @@
 		letter-spacing: 3px;
 		margin-top:0px;
 		padding-bottom:7%;
-		
 	}
+
+/*Media Queries*/
+
+	/*Mobile Responsive*/
+	
+	@media screen and (max-width: 645px){
+
+		#hero>h1{
+			display:flex;
+			color:white;
+			font-weight:lighter;
+			font-size:2.75em;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			margin-top:0px;
+			padding-bottom:7%;
+			text-align:center;
+		}
+
+		section {
+	    	display:flex;
+	    	flex-direction: column;
+	    }
+
+	    article{
+	    	margin:10px;
+	    }
+
+	    footer{
+	    	margin-top:790px;
+	    	text-align:center;
+	    }
+	}   
+
+	/*Desktop*/
+
+	@media screen and (max-width: 2048px) {
+		section{
+		    display:flex;
+		    justify-content:space-between;
+		   	align-items:flex-start;
+		   	margin:45px;
+		   	height:90vh;
+		}
+
+		h2, article p{
+			width:75vh;
+			margin-right:0px;
+			justify-content:flex-start;
+			line-height:1.5;
+		}
+
+		h2{
+			font-size:1.94em;
+		}
+
+		img{
+			height:50vh;
+			width:77vh;
+			justify-content:center;
+		}
+
+		article p{
+			font-size:1.34em;
+		}
+	}	
